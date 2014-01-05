@@ -3,7 +3,7 @@
 function status() {
   cd ${OPENSHIFT_REPO_DIR}
 
-  ${OPENSHIFT_OSGI_DIR}versions/current/bin/runtime status
+  ${OPENSHIFT_FELIX_DIR}versions/current/bin/runtime status
 }
 
 function start() {
@@ -12,32 +12,32 @@ function start() {
   export CONSOLE_HOST="${OPENSHIFT_OSGI_IP}:15026"
 
   if [ ! -e config ]; then
-    ln -s ${OPENSHIFT_OSGI_DIR}versions/current/config ${OPENSHIFT_REPO_DIR}config
+    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/config ${OPENSHIFT_REPO_DIR}config
   fi
 
   if [ ! -e bundle ]; then
-    ln -s ${OPENSHIFT_OSGI_DIR}versions/current/lib ${OPENSHIFT_REPO_DIR}bundle
+    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/lib ${OPENSHIFT_REPO_DIR}bundle
   fi
 
   if [ ! -e lib ]; then
-    ln -s ${OPENSHIFT_OSGI_DIR}versions/current/lib ${OPENSHIFT_REPO_DIR}lib
+    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/lib ${OPENSHIFT_REPO_DIR}lib
   fi
 
   if [ ! -e logs ]; then
-    ln -s ${OPENSHIFT_OSGI_DIR}versions/current/logs ${OPENSHIFT_REPO_DIR}logs
+    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/logs ${OPENSHIFT_REPO_DIR}logs
   fi
 
   if [ ! -e run ]; then
-    ln -s ${OPENSHIFT_OSGI_DIR}versions/current/run ${OPENSHIFT_REPO_DIR}run
+    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/run ${OPENSHIFT_REPO_DIR}run
   fi
 
-  ${OPENSHIFT_OSGI_DIR}versions/current/bin/runtime start
+  ${OPENSHIFT_FELIX_DIR}versions/current/bin/runtime start
 }
 
 function stop() {
   cd ${OPENSHIFT_REPO_DIR}
 
-  ${OPENSHIFT_OSGI_DIR}versions/current/bin/runtime stop
+  ${OPENSHIFT_FELIX_DIR}versions/current/bin/runtime stop
 }
 
 function build() {
