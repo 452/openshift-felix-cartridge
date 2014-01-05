@@ -1,6 +1,6 @@
 Name: apache-felix
 Cartridge-Short-Name: Apache Felix
-Cartridge-Version: 0.0.1-77b8dbb6
+Cartridge-Version: 0.0.1
 Compatible-Versions:
 - 0.0.1
 Cartridge-Vendor: mthmulders
