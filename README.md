@@ -12,7 +12,7 @@ This cartridge embeds Apache Felix runtime as a base for OSGI based applications
 Just create new gear with this cartridge
 
 ```
-rhc create-app <your app name> https://raw.github.com/mthmulders/openshift-felix-cartridge/master/manifest
+rhc create-app <your app name> http://cartreflect-claytondev.rhcloud.com/github/mthmulders/openshift-felix-cartridge
 ```
 
 ## Control
