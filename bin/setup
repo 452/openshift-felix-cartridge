@@ -14,4 +14,4 @@ wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.fileinstall-3.
 
 cd ../bin
 
-wget ???
+wget https://raw.github.com/mthmulders/openshift-felix-cartridge/master/runtime-files/runtime
