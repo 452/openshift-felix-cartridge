@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir -p ${OPENSHIFT_DATA_DIR}run
+
+cd versions
+wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.main.distribution-4.2.1.tar.gz
+tar -xzf org.apache.felix.main.distribution-4.2.1.tar.gz
+
+ln -s felix-framework-4.2.1 current
+
+cd current/bundle
+
+wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.fileinstall-3.2.6.jar
+
+cd ../bin
+
+wget ???
