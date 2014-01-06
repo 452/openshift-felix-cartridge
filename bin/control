@@ -3,7 +3,7 @@
 function status() {
   cd ${OPENSHIFT_REPO_DIR}
 
-  ./runtime status
+  ./bin/runtime status
 }
 
 function start() {
@@ -32,7 +32,7 @@ function start() {
   fi
 
   popd
-  ./runtime start
+  ./bin/runtime start
 }
 
 function stop() {
