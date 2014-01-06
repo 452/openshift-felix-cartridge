@@ -5,7 +5,7 @@ Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.1']
 Cartridge-Vendor: mthmulders
 
-Display-Name: Apache Felix
+Display-Name: Apache Felix 4.2.1
 Description: "Apache Felix is a community effort to implement the OSGi R4 Service Platform and other interesting OSGi-related technologies under the Apache license."
 Version: '4.2.1'
 Versions: ['4.2.1']
