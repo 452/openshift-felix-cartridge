@@ -1,15 +1,15 @@
 #!/bin/bash
 
-mkdir -p ${OPENSHIFT_DATA_DIR}run
+mkdir -p ${OPENSHIFT_DATA_DIR}run && echo "Created dir ${OPENSHIFT_DATA_DIR}run"
 
-mkdir versions
+mkdir versions && echo "Created dir versions inside `pwd`"
 cd versions
 wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.main.distribution-4.2.1.tar.gz
 tar -xzf org.apache.felix.main.distribution-4.2.1.tar.gz
 
-ln -s felix-framework-4.2.1 current
+ln -s felix-framework-4.2.1 current && echo "Created symlink 'current' for 'felix-framework-4.2.1' inside `pwd`"
 
 cd current/bundle
 
 wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.fileinstall-3.2.6.jar
-
+echo "Downloaded Apache Felix FileInstall bundle v. 3.2.6"
