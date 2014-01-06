@@ -3,7 +3,7 @@
 function status() {
   cd ${OPENSHIFT_REPO_DIR}
 
-  ./felix/bin/runtime status
+  ./bin/runtime status
 }
 
 function start() {
@@ -32,11 +32,11 @@ function start() {
   fi
 
   popd
-  ./felix/bin/runtime start
+  ./bin/runtime start
 }
 
 function stop() {
-  ./felix/bin/runtime stop
+  ./bin/runtime stop
 }
 
 function build() {
