@@ -12,7 +12,7 @@ function start(){
 }
 
 function stop(){
-  echo "Stopping runtime"
+  echo "Stopping Apache Felix runtime"
   if [ -e logs/runtime.pid ]; then
     kill -s SIGTERM $(cat logs/runtime.pid)
   fi
@@ -26,10 +26,10 @@ function restart(){
 function status(){
   cd ${OPENSHIFT_FELIX_DIR}versions/current/
   if [ -e logs/runtime.pid ] && $(kill -0 $(cat logs/runtime.pid) > /dev/null 2>&1); then
-    echo "Runtime running"
+    echo "Apache Felix runtime running"
     return 0
   else
-    echo "Runtime not running"
+    echo "Apache Felix runtime not running"
     return 1
   fi
 }
