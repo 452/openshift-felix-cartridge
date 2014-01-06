@@ -6,6 +6,7 @@ fi
 
 function start(){
   echo "Starting Apache Felix runtime"
+  cd ${OPENSHIFT_FELIX_DIR}versions/current/
   nohup java -Dosgi.console=${CONSOLE_HOST} -jar bin/felix.jar </dev/null > logs/runtime.log 2>&1 &
   echo $! > logs/runtime.pid
 }
@@ -23,6 +24,7 @@ function restart(){
 }
 
 function status(){
+  cd ${OPENSHIFT_FELIX_DIR}versions/current/
   if [ -e logs/runtime.pid ] && $(kill -0 $(cat logs/runtime.pid) > /dev/null 2>&1); then
     echo "Runtime running"
     return 0
