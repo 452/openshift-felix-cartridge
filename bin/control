@@ -7,6 +7,7 @@ function status() {
 }
 
 function start() {
+  echo "start (always returning 0 for the moment)"
   pushd ${OPENSHIFT_REPO_DIR}
 
   export CONSOLE_HOST="${OPENSHIFT_OSGI_IP}:15026"
@@ -33,25 +34,32 @@ function start() {
 
   popd
   ./bin/runtime start
+  return 0
 }
 
 function stop() {
+  echo "stop (always returning 0 for the moment)"
   ./bin/runtime stop
+  return 0
 }
 
 function build() {
+  echo "build not yet implemented"
   return 0
 }
 
 function post-deploy() {
+  echo "post-deploy not yet implemented"
   return 0
 }
 
 function pre-build() {
+  echo "pre-build not yet implemented"
   return 0
 }
 
 function tidy() {
+  echo "tidy not yet implemented"
   return 0
 }
 
