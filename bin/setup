@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# The scripts will be run directly from the home directory of the cartridge.
+
 mkdir -p ${OPENSHIFT_DATA_DIR}run && echo "Created dir ${OPENSHIFT_DATA_DIR}run"
 
 mkdir versions && echo "Created dir versions inside `pwd`"
