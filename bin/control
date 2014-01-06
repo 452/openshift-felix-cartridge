@@ -3,11 +3,11 @@
 function status() {
   cd ${OPENSHIFT_REPO_DIR}
 
-  ${OPENSHIFT_FELIX_DIR}versions/current/bin/runtime status
+  ./runtime status
 }
 
 function start() {
-  cd ${OPENSHIFT_REPO_DIR}
+  pushd ${OPENSHIFT_REPO_DIR}
 
   export CONSOLE_HOST="${OPENSHIFT_OSGI_IP}:15026"
 
@@ -31,13 +31,12 @@ function start() {
     ln -s ${OPENSHIFT_FELIX_DIR}versions/current/run ${OPENSHIFT_REPO_DIR}run
   fi
 
-  ${OPENSHIFT_FELIX_DIR}versions/current/bin/runtime start
+  popd
+  ./runtime start
 }
 
 function stop() {
-  cd ${OPENSHIFT_REPO_DIR}
-
-  ${OPENSHIFT_FELIX_DIR}versions/current/bin/runtime stop
+  ./runtime stop
 }
 
 function build() {
