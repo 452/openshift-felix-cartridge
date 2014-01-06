@@ -36,7 +36,7 @@ function start() {
 }
 
 function stop() {
-  ./runtime stop
+  ./bin/runtime stop
 }
 
 function build() {
