@@ -21,4 +21,4 @@ wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.shell.remote-1
 echo "Downloaded Apache Felix RemoteShell bundle v. 1.1.2"
 
 cd ../conf
-cat "osgi.shell.telnet.ip=${OPENSHIFT_FELIX_IP}" >> config.properties
+echo "osgi.shell.telnet.ip=${OPENSHIFT_FELIX_IP}" >> config.properties
