@@ -21,5 +21,5 @@ At this time, there is not functionality exposed by default. When you start the 
 
 ```
 rhc ssh <your app name>
-telnet ${OPENSHIFT_FELIX_IP} 15026
+telnet ${OPENSHIFT_FELIX_IP} 6666
 ```
