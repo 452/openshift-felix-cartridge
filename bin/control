@@ -1,8 +1,6 @@
 #!/bin/bash
 
 function status() {
-  cd ${OPENSHIFT_REPO_DIR}
-
   ./bin/runtime status
 }
 
