@@ -1,13 +1,9 @@
 #!/bin/bash
 
-if [ -z "$CONSOLE_HOST" ]; then
-  export CONSOLE_HOST="localhost:15026"
-fi
-
 function start(){
   echo "Starting Apache Felix runtime"
   cd ${OPENSHIFT_FELIX_DIR}versions/current/
-  nohup java -Dosgi.console=${CONSOLE_HOST} -Dgosh.args="--nointeractive" -jar bin/felix.jar </dev/null > ${OPENSHIFT_DATA_DIR}logs/runtime.log 2>&1 &
+  nohup java -Dgosh.args="--nointeractive" -jar bin/felix.jar </dev/null > ${OPENSHIFT_DATA_DIR}logs/runtime.log 2>&1 &
   echo $! > ${OPENSHIFT_DATA_DIR}logs/runtime.pid
 }
 

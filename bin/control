@@ -7,8 +7,6 @@ function status() {
 function start() {
   pushd ${OPENSHIFT_REPO_DIR}
 
-  export CONSOLE_HOST="${OPENSHIFT_FELIX_IP}:15026"
-
   if [ ! -e config ]; then
     ln -s ${OPENSHIFT_FELIX_DIR}versions/current/config ${OPENSHIFT_REPO_DIR}config
   fi
