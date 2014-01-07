@@ -1,13 +1,8 @@
-openshift-felix-cartridge
-=========================
-
-OpenShift cartridge installing the Apache Felix OSGi runtime.
-
 # OpenShift OSGI cartridge
 
 This cartridge embeds the Apache Felix runtime as a base for OSGI based applications on OpenShift.
 
-## How to
+## How to use
 
 Just create a new gear with this cartridge by issuing
 
