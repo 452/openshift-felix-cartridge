@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo Removing old bundles...
+rm ${OPENSHIFT_FELIX_DIR}versions/current/bundle/*.jar
+echo Deploying new bundles...
+cp -v ${OPENSHIFT_REPO_DIR}/release/*.jar ${OPENSHIFT_FELIX_DIR}versions/current/bundle/
