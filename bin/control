@@ -5,29 +5,6 @@ function status() {
 }
 
 function start() {
-  pushd ${OPENSHIFT_REPO_DIR}
-
-  if [ ! -e config ]; then
-    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/config ${OPENSHIFT_REPO_DIR}config
-  fi
-
-  if [ ! -e bundle ]; then
-    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/lib ${OPENSHIFT_REPO_DIR}bundle
-  fi
-
-  if [ ! -e lib ]; then
-    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/lib ${OPENSHIFT_REPO_DIR}lib
-  fi
-
-  if [ ! -e logs ]; then
-    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/logs ${OPENSHIFT_REPO_DIR}logs
-  fi
-
-  if [ ! -e run ]; then
-    ln -s ${OPENSHIFT_FELIX_DIR}versions/current/run ${OPENSHIFT_REPO_DIR}run
-  fi
-
-  popd
   ./bin/runtime start
 }
 
