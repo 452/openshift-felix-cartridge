@@ -7,17 +7,17 @@ mkdir -p ${OPENSHIFT_DATA_DIR}logs && echo "Created dir ${OPENSHIFT_DATA_DIR}log
 
 mkdir versions && echo "Created dir versions inside `pwd`"
 cd versions
-wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.main.distribution-4.2.1.tar.gz
-tar -xzf org.apache.felix.main.distribution-4.2.1.tar.gz
-rm org.apache.felix.main.distribution-4.2.1.tar.gz
+wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.main.distribution-4.6.1.tar.gz
+tar -xzf org.apache.felix.main.distribution-4.6.1.tar.gz
+rm org.apache.felix.main.distribution-4.6.1.tar.gz
 
-ln -s felix-framework-4.2.1 current && echo "Created symlink 'current' for 'felix-framework-4.2.1' inside `pwd`"
+ln -s felix-framework-4.6.1 current && echo "Created symlink 'current' for 'felix-framework-4.6.1' inside `pwd`"
 
 cd current/bundle
 
-wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.fileinstall-3.2.6.jar
-echo "Downloaded Apache Felix FileInstall bundle v. 3.2.6"
-wget http://mirror.reverse.net/pub/apache//felix/org.apache.felix.shell.remote-1.1.2.jar
+wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.fileinstall-3.5.0.jar
+echo "Downloaded Apache Felix FileInstall bundle v. 3.5.0"
+wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.shell.remote-1.1.2.jar
 echo "Downloaded Apache Felix RemoteShell bundle v. 1.1.2"
 
 cd ../conf
