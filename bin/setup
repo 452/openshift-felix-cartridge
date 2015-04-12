@@ -25,6 +25,12 @@ wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.http.servlet-ap
 echo "Downloaded Apache Felix Servlet Api bundle v. 1.1.0"
 wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.http.jetty-3.0.2.jar
 echo "Downloaded Apache Felix Jetty bundle v. 3.0.2"
+wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.http.api-2.3.2.jar
+echo "Downloaded Apache Felix HTTP API bundle v. 2.3.2"
+wget http://mirror.reverse.net/pub/apache/felix/org.apache.felix.webconsole-4.2.8-all.jar
+echo "Downloaded Apache Felix Web Console bundle v. 4.2.8"
+
 
 cd ../conf
 echo "osgi.shell.telnet.ip=${OPENSHIFT_FELIX_IP}" >> config.properties
+echo "org.apache.felix.http.host=${OPENSHIFT_FELIX_IP}" >> config.properties
