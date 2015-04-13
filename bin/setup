@@ -34,3 +34,4 @@ echo "Downloaded Apache Felix Web Console bundle v. 4.2.8"
 cd ../conf
 echo "osgi.shell.telnet.ip=${OPENSHIFT_FELIX_IP}" >> config.properties
 echo "org.apache.felix.http.host=${OPENSHIFT_FELIX_IP}" >> config.properties
+echo "org.ops4j.pax.web.listening.addresses=${OPENSHIFT_FELIX_IP}" >> config.properties
